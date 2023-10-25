@@ -1,0 +1,129 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style.css" />
+
+    <title>Carousel Component</title>
+
+    <style>
+          /*
+      SPACING SYSTEM (px)
+      2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
+      FONT SIZE SYSTEM (px)
+      10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+
+      OUR MAIN COLOR: #087f5b   LIGHTER: #099268
+
+      TEXT-COLOR:  #343a40      LIGHTER: #495057
+      */
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Inter",sans-serif;
+        line-height: 1;
+        padding-top: 200px;
+        display: flex;
+        justify-content: center;
+        padding-top: 200px;
+      }
+      .challenge{
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+      button{
+        color: #343a40;
+        font-size: 18px;
+        font-weight: 600;
+        border: none;
+        cursor: pointer;
+        height: 36px;
+        width: 36px;
+        border-radius: 50%;
+        background: #fff;
+      }
+      .btn{
+        height: 48px;
+        width: 48px;
+        border: 1px solid #087f5b;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .icon{
+        height: 24px;
+        width:24px;
+        stroke: #087f5b;
+      }
+      button:hover,
+      .btn3{
+        background: #087f5b;
+        color: #fff;
+      }
+      /* IF THEY LINKS THERE IS SOME NOTES */
+      /* if we gave btn3 another class and some property over it we call
+      the 2 class and the one with 2 class will win
+      for example */
+      /* .page-link.page--link--current{
+        some color for examle
+      } */
+      /* SEE  CHALLENGE#1 video 94 */
+      /*The one with the higher value the one will gets applayed  */
+      .btn:hover .icon{
+        stroke: #fff;
+      }
+      /* .btn-left{
+        position: absolute;
+        left: 0;
+      }
+      .btn-right{
+        position: absolute;
+        right: 0;
+      } */
+      /* .btn3{
+        background-color: #087f5b;
+        color: #fff;
+      } */
+    </style>
+
+  </head>
+  <body>
+    <div class="challenge">
+
+      <button class="btn btn-left">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+        class="icon">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+        </svg>
+        
+      </button>
+      <button>1</button>
+      <button>2</button>
+      <button class="btn3 make-it-two">3</button>
+      <button>4</button>
+      <button>5</button>
+      <button>6</button>
+      <span>...</span>
+      <button>23</button>
+      <button class="btn btn-right">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+        class="icon">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+        </svg>
+      </button>
+    </div>
+  </body>
+</html>
